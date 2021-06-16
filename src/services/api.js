@@ -9,6 +9,9 @@ const getDataFromApi = () => {
           image: character.image,
           id: character.id,
           status: character.status,
+          gender: character.gender,
+          origin: character.origin.name,
+          episode: character.epsisode,
         };
       });
       console.log(characters);

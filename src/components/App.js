@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import '../stylesheets/App.scss';
 import getDataFromApi from '../services/api';
 import CharacterList from './CharacterList';
 import FilterByName from './FilterByName';
 import localS from '../services/local-storaje';
+import Filters from './Filters';
+import CharacterDetail from './CharacterDetail';
 
 const App = () => {
   const [characters, setCharacters] = useState(localS.get('characters', []));
@@ -38,16 +41,36 @@ const App = () => {
     return character.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
+  //render
+  const renderCharacterDetail = (props) => {
+    const routeCharacterId = parseInt(props.match.params.characterId);
+    const foundCharacter = characters.find((character) => {
+      return character.id === routeCharacterId;
+    });
+
+    if (foundCharacter !== undefined) {
+      return <CharacterDetail character={foundCharacter} />;
+    } else {
+      return <p>Character not found</p>;
+    }
+  };
+
   return (
     <>
       <h2 className='characters--title'>Characters</h2>
-      <FilterByName
-        filterName={filterName}
-        handleFilterName={handleFilterName}
-      />
-      <div className='col1'>
-        <CharacterList characters={filteredCharacters} />
-      </div>
+      <Switch>
+        <Route exact path='/'>
+          <Filters
+            filterName={filterName}
+            handleFilterName={handleFilterName}
+          />
+          <div className='col1'>
+            <CharacterList characters={filteredCharacters} />
+          </div>
+        </Route>
+
+        <Route path='/character/:characterId' render={renderCharacterDetail} />
+      </Switch>
     </>
   );
 };
