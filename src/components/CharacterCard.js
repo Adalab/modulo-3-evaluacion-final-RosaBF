@@ -5,12 +5,12 @@ const CharacterCard = (props) => {
     <article className='card'>
       <img
         className='card__img'
-        src={props.charactersData.image}
-        alt={`foto de ${props.charactersData.name}`}
-        title={`foto de ${props.charactersData.name}`}
+        src={props.character.image}
+        alt={`foto de ${props.character.name}`}
+        title={`foto de ${props.character.name}`}
       />
-      <h4 className='card__name'>Name: {props.charactersData.name}</h4>
-      <p className='card__specie'>Specie: {props.charactersData.species}</p>
+      <h4 className='card__name'>Name: {props.character.name}</h4>
+      <p className='card__specie'>Specie: {props.character.species}</p>
     </article>
   );
 };

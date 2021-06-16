@@ -2,17 +2,17 @@ import React from 'react';
 import CharacterCard from './CharacterCard';
 
 const CharacterList = (props) => {
-  const userElements = props.charactersData.map((user) => {
+  const characterElements = props.characters.map((character) => {
     return (
-      <li key={user.id}>
-        <CharacterCard user={user} />
+      <li key={character.id}>
+        <CharacterCard character={character} />
       </li>
     );
   });
 
   return (
     <section>
-      <ul className='cards'>{userElements}</ul>
+      <ul className='cards'>{characterElements}</ul>
     </section>
   );
 };

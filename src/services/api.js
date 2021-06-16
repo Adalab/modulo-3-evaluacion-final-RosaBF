@@ -2,7 +2,7 @@ const getDataFromApi = () => {
   return fetch('https://rickandmortyapi.com/api/character')
     .then((response) => response.json())
     .then((charactersData) => {
-      const allCleanData = charactersData.results.map((character) => {
+      const characters = charactersData.results.map((character) => {
         return {
           name: character.name,
           species: character.species,
@@ -11,8 +11,8 @@ const getDataFromApi = () => {
           status: character.status,
         };
       });
-      console.log(allCleanData);
-      return allCleanData;
+      console.log(characters);
+      return characters;
     });
 };
 
