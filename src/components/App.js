@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import logo from '../images/logo.png';
 import '../stylesheets/App.scss';
 import getDataFromApi from '../services/api';
 import CharacterList from './CharacterList';
@@ -7,6 +8,7 @@ import FilterByName from './FilterByName';
 import localS from '../services/local-storaje';
 import Filters from './Filters';
 import CharacterDetail from './CharacterDetail';
+import { logDOM } from '@testing-library/react';
 
 const App = () => {
   const [characters, setCharacters] = useState(localS.get('characters', []));
@@ -57,7 +59,10 @@ const App = () => {
 
   return (
     <>
-      <h2 className='characters--title'>Characters</h2>
+      <div className='img-container'>
+        <img className='title-image' src={logo} />
+      </div>
+
       <Switch>
         <Route exact path='/'>
           <Filters

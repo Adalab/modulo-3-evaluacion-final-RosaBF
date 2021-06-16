@@ -1,9 +1,30 @@
 * {
+  box-sizing: border-box;
+  text-decoration: none;
   list-style: none;
-  background-color: black;
-  color: antiquewhite;
 }
 
 .cards-list {
   display: flex;
+  flex-wrap: wrap;
+}
+
+.img-container {
+  background-color: black;
+  width: fit-content;
+  margin-left: 300px;
+}
+
+.form {
+  margin-left: 225px;
+  padding: 10px;
+}
+
+.form__label {
+  padding: 10px;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center©;
 }
