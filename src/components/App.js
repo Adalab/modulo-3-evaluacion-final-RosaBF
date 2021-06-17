@@ -22,7 +22,7 @@ const App = () => {
   }, []);
 
   //Local Storage
-  console.log('Guardando en lc', characters);
+
   useEffect(() => {
     localS.set('characters', characters);
   }, [characters]);
@@ -31,7 +31,7 @@ const App = () => {
     localS.set('filterName', filterName);
   }, [filterName]);
 
-  //HandleEvents
+  //HandleEvents/
 
   const handleFilterName = (data) => {
     if (data.key === 'name') {
@@ -45,6 +45,7 @@ const App = () => {
 
   //render
   const renderCharacterDetail = (props) => {
+    console.log('Router props', props);
     const routeCharacterId = parseInt(props.match.params.characterId);
     const foundCharacter = characters.find((character) => {
       return character.id === routeCharacterId;
@@ -52,15 +53,13 @@ const App = () => {
 
     if (foundCharacter !== undefined) {
       return <CharacterDetail character={foundCharacter} />;
-    } else {
-      return <p>Character not found</p>;
     }
   };
 
   return (
     <>
       <div className='img-container'>
-        <img className='title-image' src={logo} />
+        <img className='title-logo' src={logo} />
       </div>
 
       <Switch>
@@ -70,7 +69,11 @@ const App = () => {
             handleFilterName={handleFilterName}
           />
           <div className='col1'>
-            <CharacterList characters={filteredCharacters} />
+            {filteredCharacters.length > 0 ? (
+              <CharacterList characters={filteredCharacters} />
+            ) : (
+              <p>No encontrado</p>
+            )}
           </div>
         </Route>
 

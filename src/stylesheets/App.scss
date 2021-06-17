@@ -2,21 +2,47 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+
+  font-family: 'Gloria Hallelujah', cursive;
+  color: greenyellow;
+  text-shadow: 0px 0px 30px rgb(126, 236, 23);
+}
+body {
+  background-color: blueviolet;
+}
+
+.form__input-text {
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+}
+.form__label {
+  font-size: 20px;
 }
 
 .cards-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 .img-container {
-  background-color: black;
   width: fit-content;
   margin-left: 300px;
 }
 
+.title-logo {
+  border-radius: 10px;
+  &:hover {
+    background-color: aquamarine;
+    color: aquamarine;
+    transition: background-color 0.6s ease;
+  }
+}
+
 .form {
-  margin-left: 225px;
+  margin-left: 210px;
   padding: 10px;
 }
 
@@ -26,5 +52,34 @@
 
 .card__container {
   display: flex;
-  justify-content: center©;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px;
+  background-color: rgb(80, 168, 184);
+  border-radius: 20px;
+  margin-left: 309px;
+  font-size: 18px;
+  box-shadow: 0px 2px 30px rgb(240, 225, 24);
+}
+
+.card__img {
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.card__description {
+  padding: 50px;
+}
+.link__back {
+  padding: 50px;
+  position: relative;
+  top: 33px;
+
+  &--button {
+    background-color: hotpink;
+    border: 0;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 1em;
+  }
 }

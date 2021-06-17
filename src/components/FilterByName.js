@@ -1,7 +1,8 @@
 import React from 'react';
+import '../stylesheets/App.scss';
 
 const FilterByName = (props) => {
-  const funcionINtermedia = (ev) => {
+  const funcionIntermedia = (ev) => {
     props.handleFilterName({
       key: 'name',
       value: ev.target.value,
@@ -13,14 +14,15 @@ const FilterByName = (props) => {
     <>
       <form className='form'>
         <label className='form__label' htmlFor='name'>
-          Characters:
+          Characters
         </label>
         <input
-          onChange={funcionINtermedia}
           className='form__input-text'
+          onChange={funcionIntermedia}
           type='text'
           name='name'
           id='name'
+          value={props.filterName}
         />
       </form>
     </>

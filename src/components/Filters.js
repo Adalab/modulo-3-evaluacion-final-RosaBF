@@ -1,5 +1,6 @@
 import React from 'react';
 import FilterByName from './FilterByName';
+import '../stylesheets/App.scss';
 
 const Filters = (props) => {
   const handleForm = (ev) => {

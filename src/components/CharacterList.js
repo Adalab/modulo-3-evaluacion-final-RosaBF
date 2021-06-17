@@ -1,5 +1,6 @@
 import React from 'react';
 import CharacterCard from './CharacterCard';
+import '../stylesheets/App.scss';
 
 const CharacterList = (props) => {
   const characterElements = props.characters.map((character) => {
