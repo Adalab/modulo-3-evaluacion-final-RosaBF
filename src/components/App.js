@@ -31,7 +31,7 @@ const App = () => {
     localS.set('filterName', filterName);
   }, [filterName]);
 
-  //HandleEvents/
+  //HandleEvents
 
   const handleFilterName = (data) => {
     if (data.key === 'name') {

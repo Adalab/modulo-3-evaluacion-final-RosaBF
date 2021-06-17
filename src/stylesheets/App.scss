@@ -2,7 +2,6 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-
   font-family: 'Gloria Hallelujah', cursive;
   color: greenyellow;
   text-shadow: 0px 0px 30px rgb(126, 236, 23);
@@ -107,8 +106,8 @@ body {
   padding: 50px;
 }
 .link__back {
-  padding: 50px;
   position: relative;
+  padding: 50px;
   top: 33px;
 
   &--button {
