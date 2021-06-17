@@ -72,7 +72,7 @@ const App = () => {
             {filteredCharacters.length > 0 ? (
               <CharacterList characters={filteredCharacters} />
             ) : (
-              <p>No encontrado</p>
+              <p className='not-found'>Character not found</p>
             )}
           </div>
         </Route>

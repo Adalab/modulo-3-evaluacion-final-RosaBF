@@ -17,11 +17,11 @@ const CharacterDetail = (props) => {
         />
 
         <ul className='card__description'>
-          <li>Name: {props.character.name}</li>
-          <li>Specie: {props.character.species}</li>
-          <li>Planet: {props.character.location}</li>
-          <li>Episodes: {props.character.episode2}</li>
-          <li>Status: {props.character.status}</li>
+          <li className='lista'>Name: {props.character.name}</li>
+          <li className='lista'>Specie: {props.character.species}</li>
+          <li className='lista'>Planet: {props.character.location}</li>
+          <li className='lista'>Episodes: {props.character.episode2}</li>
+          <li className='lista'>Status: {props.character.status}</li>
         </ul>
       </section>
     </div>

@@ -8,16 +8,30 @@
   text-shadow: 0px 0px 30px rgb(126, 236, 23);
 }
 body {
-  background-color: blueviolet;
+  background-color: rgb(5, 5, 5);
 }
 
 .form__input-text {
-  background-color: black;
+  background-color: rgb(8, 178, 190);
   border-radius: 10px;
-  border: none;
+  border-style: none;
+  outline: none;
 }
+
 .form__label {
   font-size: 20px;
+}
+
+.not-found {
+  position: relative;
+  left: 467px;
+  top: 30px;
+  font-size: 20px;
+  width: fit-content;
+  border: dotted 5px rgb(241, 238, 8);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgb(238, 215, 9);
 }
 
 .cards-list {
@@ -31,8 +45,29 @@ body {
   width: fit-content;
   margin-left: 300px;
 }
+.card-list-1 {
+  border-radius: 20px;
+}
+
+.cards__info {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(8, 178, 190);
+  border-radius: 20px;
+  align-items: left;
+  line-height: 5px;
+  margin-bottom: 10px;
+
+  &--name {
+    margin-left: 20px;
+  }
+  &--specie {
+    margin-left: 20px;
+  }
+}
 
 .title-logo {
+  width: 96%;
   border-radius: 10px;
   &:hover {
     background-color: aquamarine;
@@ -57,13 +92,14 @@ body {
   padding: 20px;
   background-color: rgb(80, 168, 184);
   border-radius: 20px;
-  margin-left: 309px;
+  margin-left: 300px;
   font-size: 18px;
   box-shadow: 0px 2px 30px rgb(240, 225, 24);
 }
 
 .card__img {
   border-radius: 20px;
+
   width: fit-content;
 }
 
